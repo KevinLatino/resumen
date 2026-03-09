@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Learn Database Fundamentals
 
-## Getting Started
+Plataforma educativa para aprender fundamentos de bases de datos. Contenido basado en el resumen de lectura del curso de Base de Datos.
 
-First, run the development server:
+## Características
+
+- **8 módulos** de contenido: fundamentos, importancia, modelos, rendimiento, SQL (DML/DDL), consultas, MER, modelo conceptual
+- **Quiz** de 5 preguntas con puntuación
+- **Dashboard** de progreso (módulos completados y puntuación)
+- **Modo oscuro** por defecto
+- Solo frontend, sin base de datos
+
+## Tech stack
+
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS 4
+- Zustand (estado local)
+
+## Cómo ejecutar
 
 ```bash
+# Instalar dependencias
+npm install
+
+# Modo desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build de producción
+npm run build
+
+# Iniciar en producción
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en el navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estructura
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/
+│   ├── page.tsx          # Home
+│   ├── modules/          # Lista de módulos
+│   ├── modules/[id]/     # Detalle de cada módulo
+│   ├── quiz/             # Quiz interactivo
+│   └── dashboard/        # Progreso del estudiante
+├── components/
+│   └── Nav.tsx           # Navegación
+└── lib/
+    ├── modules.ts        # Contenido de los módulos
+    ├── quiz.ts           # Preguntas del quiz
+    └── store.ts          # Estado (Zustand)
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Base de Datos — Prof. Jonathan Mora Barrientos*
